@@ -7,12 +7,7 @@
 #' @return the subset of list elements with that text string
 #' @export
 find_search_text <- function(readme_text, search_string) {
-  o1 <- lapply(readme_text, function(y) {
-    y[which(grepl(x = tolower(y), pattern = tolower(search_string)))]
+  lapply(readme_text, function(z) {
+    z[which(grepl(x = tolower(z), pattern = tolower(search_string)))]
   })
-  o2 <- list()
-  for(o in o1) {
-    if(length(o) > 0) o2 <- append(o2, o)
-  }
-  return(o2)
 }
