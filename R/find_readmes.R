@@ -16,8 +16,11 @@ find_READMES <- function() {
   WD <- config_json[['ANCHOR_wd']]
   
   # now, get all files that start with -README.txt in them
-  all_readmes <- list.files(WD, "^-README*.txt", recursive = T,
+  all_readmes <- list.files(WD, "^-README", recursive = T,
              full.names=TRUE, include.dirs=TRUE)
+  # remove  the TEMPLATE file
+  all_readmes <- all_readmes[-which(all_readmes == 
+                                      file.path(WD, "-README_TEMPLATE.txt"))]
 
   return(all_readmes)
   

@@ -2,14 +2,15 @@
 % Please edit documentation in R/set_config.R
 \name{set_config}
 \alias{set_config}
-\title{Sets configuration file location}
+\title{Sets the configuration file for each user to point to the ANCHOR config_json}
 \usage{
-set_config(config_value = NULL)
+set_config(config_json_loc = NULL)
 }
 \arguments{
 \item{config_path}{The full path to the getANCHORconfig.R file}
 }
 \description{
 You only need to run this once. This has some limited error checking but assumes
-you are passing in a valid path
+you are passing in a valid path. This is just the pointer to the main JSON file
+in the ANCHOR directory. everything else you need will be in there.
 }
