@@ -1,0 +1,23 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}s
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+# eventually we'll do this
+#library(getANCHOR)
+
+# but for now you can do
+devtools::load_all(path = "https://github.com/cmilando/getANCHOR", reset = T)
+```
