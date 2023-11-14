@@ -1,5 +1,5 @@
 ---
-title: "introduction"
+title: "Weighing ANCHOR"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{introduction}
@@ -14,17 +14,28 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Most users
+
+To get access to these functions
+
 ```{r setup}
-# but for now you can do
 devtools::install_github("cmilando/getANCHOR")
 library(getANCHOR)
 ```
 
-In order for the functions to work, you will need to know where to point it. 
-For this, you have to use the ANCHOR config file. When you get the file location,
-use the following command to access. This only has to be done once. 
+In order for the functions to work, you will need to know where to point it. For this, you have to use the ANCHOR config file. When you get the file location, use the following command to access. This only has to be done once, and then it's saved in the local user cache
 
 ```{r config}
-CONFIG_FNAME = "*****/*****/*****/*****.RDS"
+CONFIG_FNAME = "*****/*****/*****/*****.JSON"
 set_config(CONFIG_FNAME)
+```
+
+## Beta testers
+
+If you need to update `getANCHOR` (because you update a function, and then commit your changes), you can do the following, and then repeat the setup steps
+
+```{r update}
+devtools::unload("getANCHOR")
+devtools::uninstall("getANCHOR")
+remove.packages("getANCHOR")
 ```
