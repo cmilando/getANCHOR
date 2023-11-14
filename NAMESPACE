@@ -2,4 +2,5 @@
 
 export(find_READMES)
 export(getHello)
+export(get_all_readme_text)
 export(set_config)

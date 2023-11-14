@@ -36,6 +36,5 @@ If you need to update `getANCHOR` (because you update a function, and then commi
 
 ```{r update}
 devtools::unload("getANCHOR")
-devtools::uninstall("getANCHOR")
 remove.packages("getANCHOR")
 ```
