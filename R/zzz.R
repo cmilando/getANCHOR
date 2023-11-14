@@ -4,6 +4,6 @@
 
 .onLoad <- function(libname, pkgname) {
   # this is probably an awful idea
-  devtools::install_github("https://github.com/cmilando/getANCHOR")
+  devtools::install_github("cmilando/getANCHOR")
   library(getANCHOR)
 }
