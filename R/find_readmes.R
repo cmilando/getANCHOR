@@ -7,8 +7,13 @@ find_READMES <- function() {
   
   # first, get the working dir
   config_dir <- rappdirs::user_config_dir("getANCHOR")
-  config_file <- file.path(config_dir, "config.RDS")
-  WD <- readRDS(config_file)$WD
+  config_file <- file.path(config_dir, "config_json_loc.RDS")
+  config_json_loc <- readRDS(config_file)
+  config_json <- jsonlite::read_json(config_json_loc)
+  
+  # check to make sure that config_json has what you need in it
+  stopifnot(!is.null(config_json[['WD']]))
+  WD <- config_json[['WD']]
   
   # now, get all files that have -README.txt in them
   all_readmes <- list.files(WD, "^_README", recursive=TRUE, 
