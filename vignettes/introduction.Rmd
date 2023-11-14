@@ -18,20 +18,21 @@ knitr::opts_chunk$set(
 
 To get access to these functions
 
-```{r setup}
+```{r setup,eval=FALSE}
 devtools::install_github("cmilando/getANCHOR")
 library(getANCHOR)
 ```
 
 In order for the functions to work, you will need to know where to point it. For this, you have to use the ANCHOR config file. When you get the file location, use the following command to access. This only has to be done once, and then it's saved in the local user cache
 
-```{r config}
+```{r config,eval=FALSE}
 CONFIG_FNAME = "*****/*****/*****/*****.JSON"
 set_config(CONFIG_FNAME)
 ```
 
 To search for a specific piece of text, try this
-```{r search}
+
+```{r search,eval=FALSE}
 # first find and get all readmes
 xx <- find_READMES()
 
@@ -48,7 +49,7 @@ find_search_text(yy, search_text)
 
 If you need to update `getANCHOR` (because you update a function, and then commit your changes), you can do the following, and then repeat the setup steps
 
-```{r update}
+```{r update,eval=FALSE}
 devtools::unload("getANCHOR")
 remove.packages("getANCHOR")
 ```
