@@ -15,5 +15,5 @@ find_search_text(readme_text, search_string)
 the subset of list elements with that text string
 }
 \description{
-Obviously a lot to update here
+Obviously a lot to update here, but not a bad start
 }

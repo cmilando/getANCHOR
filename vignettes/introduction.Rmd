@@ -32,8 +32,15 @@ set_config(CONFIG_FNAME)
 
 To search for a specific piece of text, try this
 ```{r search}
-search_text <- "temp"
+# first find and get all readmes
+xx <- find_READMES()
 
+# get readme text
+yy <- get_all_readme_text(xx)
+
+# now find which ones have the search string
+search_text <- "temp"
+find_search_text(yy, search_text)
 
 ```
 
