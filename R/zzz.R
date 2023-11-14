@@ -1,5 +1,5 @@
 .onAttach <- function(libname, pkgname) {
-
+  packageStartupMessage("Weigh ANCHOR!")
 }
 
 .onLoad <- function(libname, pkgname) {
