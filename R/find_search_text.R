@@ -5,6 +5,7 @@
 #' @param readme_text a list output from get_all_readme_text, probably could be a class
 #' @param search_string what you are looking for
 #' @return the subset of list elements with that text string
+#' @export
 find_search_text <- function(readme_text, search_string) {
   lapply(readme_text, function(y) {
     y[which(grepl(x = tolower(y), pattern = tolower(search_string)))]
