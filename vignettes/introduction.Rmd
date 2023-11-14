@@ -30,6 +30,13 @@ CONFIG_FNAME = "*****/*****/*****/*****.JSON"
 set_config(CONFIG_FNAME)
 ```
 
+To search for a specific piece of text, try this
+```{r search}
+search_text <- "temp"
+
+
+```
+
 ## Beta testers
 
 If you need to update `getANCHOR` (because you update a function, and then commit your changes), you can do the following, and then repeat the setup steps

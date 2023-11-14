@@ -1,6 +1,14 @@
 # getANCHOR
 a local R package for accessing ANCHOR data
 
+Everytime you update a function:
+* devtools::document()
+* commit to github
+* unload reload
+
+This probably would be best as fully contained on the SCC, once its stable.
+That will be more secure etc, but harder to version control.
+
 References:
 
 R package overview:
