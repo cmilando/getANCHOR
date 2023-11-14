@@ -12,12 +12,13 @@ find_READMES <- function() {
   config_json <- jsonlite::read_json(config_json_loc)
   
   # check to make sure that config_json has what you need in it
-  stopifnot(!is.null(config_json[['WD']]))
-  WD <- config_json[['WD']]
+  stopifnot(!is.null(config_json[['ANCHOR_wd']]))
+  WD <- config_json[['ANCHOR_wd']]
   
-  # now, get all files that have -README.txt in them
-  all_readmes <- list.files(WD, "^_README", recursive=TRUE, 
-                       full.names=TRUE, include.dirs=TRUE)
+  # now, get all files that start with -README.txt in them
+  all_readmes <- list.files(WD, "^-README*.txt", recursive = T,
+             full.names=TRUE, include.dirs=TRUE)
+
   return(all_readmes)
   
 }
