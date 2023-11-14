@@ -16,8 +16,10 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 # eventually we'll do this
-#library(getANCHOR)
+# devtools::install_github("cmilando/getANCHOR")
+# library(getANCHOR)
 
 # but for now you can do
-devtools::load_all(path = "https://github.com/cmilando/getANCHOR", reset = T)
+devtools::install_github("https://github.com/cmilando/getANCHOR")
+remove.packages("getANCHOR")
 ```
